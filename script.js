@@ -19,7 +19,7 @@ const dadosGrupos = {
   },
   "fullstack-starter": {
     nomeGrupo: "Fullstack Starter",
-    linkProjeto: "https://github.com",
+    linkProjeto: "https://github.com/eurenascimento/Tech-Girls-Project",
     integrantes: [
       { nome: "Lane", especialidade: "Frontend & JS", linkedin: "https://linkedin.com", github: "https://github.com" },
       { nome: "Vitoria", especialidade: "Fullstack (TS/Python)", linkedin: "https://linkedin.com", github: "https://github.com" },
