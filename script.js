@@ -85,6 +85,11 @@ botoesGrupo.forEach(botao => {
       });
 
       htmlConteudo += `</div>`;
+      htmlConteudo += `
+      <a href="#" class="link-projeto">
+       Acessar projeto do grupo
+       </a>
+      `;
 
       painelIntegrantes.innerHTML = htmlConteudo;
       painelIntegrantes.classList.remove('escondido');
