@@ -124,6 +124,8 @@ body {
 /* ==========================================================================
    ESTRUTURA PRINCIPAL & SEÇÕES
    ========================================================================== */
+   
+   /* Força alinhamento à esquerda em todo o conteúdo principal */
 .main-container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -131,19 +133,23 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
+  text-align: left; /*alinhamento dos textos do lado esquerdo */
 }
 
+/* Alinhamento explícito para parágrafos, títulos e frentes de atuação em todos os próximos comandos até frentes-atuacao p*/
 .titulo-destaque {
   color: var(--color-primary);
   font-size: var(--font-size-h2);
   font-weight: 800;
   margin-bottom: var(--spacing-sm);
   line-height: 1.2;
+  text-align: left;
 }
 
 p {
   margin-bottom: 16px;
   font-size: var(--font-size-paragraph);
+  text-align: left;
 }
 
 .frentes-atuacao h3 {
@@ -151,6 +157,7 @@ p {
   margin-top: var(--spacing-sm);
   margin-bottom: 4px;
   font-size: var(--font-size-h3);
+  text-align: left;
 }
 
 /* ==========================================================================
@@ -164,6 +171,7 @@ p {
   margin-bottom: var(--spacing-sm);
   font-size: 1rem;
   color: #555;
+  text-align: left;
 }
 
 .projetos-grid {
@@ -230,13 +238,14 @@ p {
   transition: color var(--transition-fast);
 }
 
-/* --- LINHA DE DIVISÃO ROXA --- */
+/* --- LINHA DE DIVISÃO ROXA (Margens ajustadas para espaçamento proporcional)--- */
 .divisor-roxo {
   border: none;
   height: 3px;
   background-color: var(--color-primary);
   margin: var(--spacing-lg) 0;
   border-radius: 2px;
+  width: 100%;
 }
 
 /* ==========================================================================
@@ -383,6 +392,7 @@ p {
 
   .subtitulo-hero {
     font-size: 1.3rem;
+    text-align: left;
   }
 
   .cabecalho-painel-grupo {
