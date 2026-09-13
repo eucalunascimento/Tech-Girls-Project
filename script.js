@@ -2,7 +2,7 @@
 const dadosGrupos = {
   "dev-dados": {
     nomeGrupo: "Dev e Dados",
-    linkProjeto: "https://github.com", // Substitua pelo link do projeto real do grupo
+    linkProjeto: "https://github.com",
     integrantes: [
       { nome: "Ana Silva", especialidade: "Frontend & React", linkedin: "https://linkedin.com", github: "https://github.com" },
       { nome: "Carla Lima", especialidade: "Data Analysis & Python", linkedin: "https://linkedin.com", github: "https://github.com" },
@@ -23,7 +23,7 @@ const dadosGrupos = {
     integrantes: [
       { nome: "Lane", especialidade: "Frontend & JS", linkedin: "https://linkedin.com", github: "https://github.com" },
       { nome: "Vitoria", especialidade: "Fullstack (TS/Python)", linkedin: "https://linkedin.com", github: "https://github.com" },
-      { nome: "CL", especialidade: "Frontend & React", linkedin: "https://linkedin.com", github: "https://github.com" }
+      { nome: "CL", especialidade: "Frontend & React", linkedin: "www.linkedin.com/in/caeu-nascimento-460866348", github: "https://github.com/eucalunascimento" }
     ]
   },
   "gestao-qa": {
