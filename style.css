@@ -3,16 +3,17 @@
    ========================================================================== */
 :root {
   /* Cores Principais da Marca */
-  --color-primary: #4B2189;        /* Roxo Profundo Tech Girls */
-  --color-primary-light: #F3EFF8;  /* Lilás Claro / Fundo */
-  --color-text-dark: #222222;      /* Texto Escuro */
+  --color-primary: #4B2189;         /* Roxo Profundo Tech Girls */
+  --color-secondary-yellow: #FFC02D;/* Amarelo da Logo Tech Girls (Texto do H3) */
+  --color-bg-site: #FFC02D;         /* Amarelo Suave para Fundo do Site */
+  --color-text-dark: #222222;       /* Texto Escuro */
   --color-white: #ffffff;
   
   /* Tipografia */
   --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-size-base: 1rem;          /* 16px */
-  --font-size-paragraph: 1.15rem;  /* ~18px para leitura confortável */
-  --font-size-h3: 1.25rem;
+  --font-size-base: 1rem;
+  --font-size-paragraph: 1.15rem;
+  --font-size-h3: 1.1rem;
   --font-size-h2: 2.2rem;
   --font-size-hero: 1.8rem;
 
@@ -45,7 +46,7 @@ html, body {
 }
 
 body {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-bg-site); /* Novo background amarelo suave */
   font-family: var(--font-family-base);
   color: var(--color-text-dark);
   line-height: 1.6;
@@ -79,13 +80,13 @@ body {
 }
 
 .meu-cabecalho h1 {
-  color: var(--color-primary-light);
+  color: var(--color-secondary-yellow);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 /* ==========================================================================
-   HERO BANNERS (LARGURA TOTAL)
+   HERO BANNERS
    ========================================================================== */
 .hero-banner {
   position: relative;
@@ -114,18 +115,17 @@ body {
 }
 
 .subtitulo-hero {
-  color: var(--color-primary-light);
+  color: var(--color-secondary-yellow);
   font-size: var(--font-size-hero);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 800;
+  text-align: left;
 }
 
 /* ==========================================================================
-   ESTRUTURA PRINCIPAL & SEÇÕES
+   ESTRUTURA PRINCIPAL & SEÇÕES (ALINHAMENTO À ESQUERDA)
    ========================================================================== */
-   
-   /* Força alinhamento à esquerda em todo o conteúdo principal */
 .main-container {
   max-width: var(--container-max-width);
   margin: 0 auto;
@@ -133,10 +133,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
-  text-align: left; /*alinhamento dos textos do lado esquerdo */
+  text-align: left; /* Garante alinhamento dos textos no canto esquerdo */
 }
 
-/* Alinhamento explícito para parágrafos, títulos e frentes de atuação em todos os próximos comandos até frentes-atuacao p*/
 .titulo-destaque {
   color: var(--color-primary);
   font-size: var(--font-size-h2);
@@ -152,17 +151,44 @@ p {
   text-align: left;
 }
 
+/* --- DESTAQUE PARA OS TÍTULOS H3 (FRENTES DE ATUAÇÃO) --- */
+.frentes-atuacao {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: var(--spacing-md) 0;
+}
+
 .frentes-atuacao h3 {
-  color: var(--color-primary);
-  margin-top: var(--spacing-sm);
-  margin-bottom: 4px;
+  display: inline-block;
+  background-color: var(--color-primary);        /* Fundo Roxo */
+  color: var(--color-secondary-yellow);           /* Texto Amarelo da Logo */
+  padding: 8px 16px;
+  border-radius: 8px;
   font-size: var(--font-size-h3);
+  font-weight: 700;
+  width: fit-content;                            /* Envolve apenas o texto */
+  box-shadow: 0 2px 6px rgba(75, 33, 137, 0.2);
   text-align: left;
 }
 
+.frentes-atuacao p {
+  margin-bottom: var(--spacing-sm);
+  padding-left: 4px;                             /* Pequeno recuo para leitura */
+}
+
 /* ==========================================================================
-   SEÇÃO DE PROJETOS & GRID
+   DIVISORES E BOTÕES
    ========================================================================== */
+.divisor-roxo {
+  border: none;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: var(--spacing-md) 0;
+  border-radius: 2px;
+  width: 100%;
+}
+
 .secao-projetos {
   width: 100%;
 }
@@ -181,7 +207,6 @@ p {
   margin-top: var(--spacing-sm);
 }
 
-/* --- BOTÕES DOS GRUPOS --- */
 .projeto-card-btn {
   background-color: var(--color-white);
   padding: var(--spacing-md);
@@ -190,66 +215,45 @@ p {
   border-left: 5px solid var(--color-primary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: left;
-  cursor: pointer; /* Garante o cursor de 'mãozinha' ao passar o mouse */
+  cursor: pointer;
   width: 100%;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
   font-family: inherit;
-  user-select: none;
 }
 
-/* Estado Hover (Passar o Mouse Por Cima) */
 .projeto-card-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(75, 33, 137, 0.15);
-  border-color: rgba(75, 33, 137, 0.3);
-  background-color: #faf8fd;
+  background-color: #ffffff;
 }
 
-/* Foco para Navegação Acessível */
-.projeto-card-btn:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* Estado Ativo (Grupo Selecionado) */
 .projeto-card-btn.ativo {
   background-color: var(--color-primary);
-  color: var(--color-primary-light);
-  border-color: var(--color-primary);
-  box-shadow: 0 6px 14px rgba(75, 33, 137, 0.25);
+  color: var(--color-secondary-yellow);
 }
 
-.projeto-card-btn.ativo h3,
+.projeto-card-btn.ativo h3 {
+  color: var(--color-secondary-yellow);
+}
+
 .projeto-card-btn.ativo p {
-  color: var(--color-primary-light);
+  color: #ffffff;
 }
 
 .projeto-card-btn h3 {
   color: var(--color-primary);
-  font-size: var(--font-size-h3);
+  font-size: 1.25rem;
   margin-bottom: var(--spacing-xs);
-  transition: color var(--transition-fast);
 }
 
 .projeto-card-btn p {
   font-size: 0.95rem;
   margin-bottom: 0;
   color: #555;
-  transition: color var(--transition-fast);
-}
-
-/* --- LINHA DE DIVISÃO ROXA (Margens ajustadas para espaçamento proporcional)--- */
-.divisor-roxo {
-  border: none;
-  height: 3px;
-  background-color: var(--color-primary);
-  margin: var(--spacing-lg) 0;
-  border-radius: 2px;
-  width: 100%;
 }
 
 /* ==========================================================================
-   PAINEL DE INTEGRANTES E LINK DO PROJETO
+   PAINEL DE INTEGRANTES
    ========================================================================== */
 .painel-integrantes.escondido {
   display: none;
@@ -273,16 +277,14 @@ p {
 .titulo-grupo-selecionado {
   color: var(--color-primary);
   font-size: 1.5rem;
-  margin-bottom: 0;
 }
 
-/* Botão de Link Direto para o Projeto do Grupo */
 .btn-link-projeto {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   background-color: var(--color-primary);
-  color: var(--color-white);
+  color: var(--color-secondary-yellow);
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: 600;
@@ -290,14 +292,11 @@ p {
   text-decoration: none;
   cursor: pointer;
   transition: all var(--transition-fast);
-  box-shadow: 0 2px 6px rgba(75, 33, 137, 0.2);
 }
 
 .btn-link-projeto:hover {
   background-color: #381867;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(75, 33, 137, 0.3);
-  color: var(--color-white);
 }
 
 .integrantes-grid {
@@ -306,7 +305,6 @@ p {
   gap: var(--spacing-sm);
 }
 
-/* CARTÃO INDIVIDUAL DE INTEGRANTE (HUB-003) */
 .integrante-card {
   background: var(--color-white);
   padding: var(--spacing-md);
@@ -315,11 +313,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
-  transition: transform var(--transition-fast);
-}
-
-.integrante-card:hover {
-  transform: translateY(-2px);
 }
 
 .integrante-card h4 {
@@ -329,7 +322,7 @@ p {
 
 .especialidade-tag {
   display: inline-block;
-  background-color: var(--color-primary-light);
+  background-color: var(--color-bg-site);
   color: var(--color-primary);
   font-weight: bold;
   font-size: 0.85rem;
@@ -358,7 +351,7 @@ p {
 
 .link-perfil:hover {
   background-color: var(--color-primary);
-  color: var(--color-primary-light);
+  color: var(--color-secondary-yellow);
 }
 
 /* ==========================================================================
@@ -369,13 +362,18 @@ p {
   padding: var(--spacing-md);
   margin-top: var(--spacing-xl);
   background-color: var(--color-primary);
-  color: var(--color-primary-light);
+  color: var(--color-secondary-yellow);
   font-size: 0.9rem;
+  width: 100%;
 }
 
-/* ==========================================================================
-   ANIMAÇÕES E MEDIA QUERIES (HUB-004)
-   ========================================================================== */
+/* Força a centralização explícita do paragrafo dentro do rodapé*/
+
+.rodape-site p {
+  text-align: center;
+  margin-bottom: 0;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -385,18 +383,10 @@ p {
   .hero-banner {
     height: 380px;
   }
-
   .titulo-destaque {
     font-size: 1.8rem;
   }
-
   .subtitulo-hero {
     font-size: 1.3rem;
-    text-align: left;
-  }
-
-  .cabecalho-painel-grupo {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }
