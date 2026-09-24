@@ -76,7 +76,7 @@ Durante o desenvolvimento do projeto, realizamos melhorias contínuas na estrutu
 2. **Cabeçalho Integrado**: Posicionamento do `<header>` sobre o banner principal com efeito flutuante e cantos arredondados (`border-radius: 37px`).
 3. **Destaque em Subgrupos**: Títulos `<h3>` estilizados como badges roxos com texto amarelo para fácil visualização das frentes de atuação.
 4. **Painel Interativo de Integrantes**: Integração JS que renderiza dinamicamente as integrantes de cada grupo de trabalho ao clicar nos botões dos projetos.
-5. **Grid de Projetos Práticos**: Exibição das frentes de atuação da comunidade (Dev, Dados, Fullstack, QA, Governança e BI) em uma grade adaptável (`repeat(auto-fit, minmax(260px, 1fr))`).
+5. **Grid de Projetos Práticos**: Exibição dos grupos e projetos da comunidade em uma grade adaptável (`repeat(auto-fit, minmax(260px, 1fr))`).
 6. **Acessibilidade**: Estruturação semântica, lista de frentes de atuação (`<ul>` / `<li>`), gerenciamento de atributos `aria-expanded`/`aria-controls` e suporte à navegação por teclado.
 
 ---
