@@ -58,7 +58,7 @@ O desenvolvimento do hub foi realizado de forma colaborativa. Abaixo está a div
 - **Documentação & Gerenciamento**:
   - Manutenção contínua do `README.md` e realização do merge dos Pull Requests da equipe.
 
-### 🌸 Lane (`Lanee-ai`)
+### 🌸 Edmilane Soares (`Lanee-ai`)
 - **Seção de Projetos Práticos**:
   - Implementação dos cards e da estrutura da seção de projetos da comunidade no HTML e CSS.
   - Adição de elementos visuais e ajuste de espaçamentos no título dos projetos.
