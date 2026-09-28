@@ -48,7 +48,7 @@
   },
   "fullstack-starter": {
     "nomeGrupo": "Fullstack Starter",
-    "linkProjeto": "https://github.com/eurenascimento/Tech-Girls-Project",
+    "linkProjeto": "https://github.com/eucalunascimento/Tech-Girls-Project",
     "integrantes": [
       {
         "nome": "Lane",
@@ -67,7 +67,7 @@
       {
         "nome": "CL",
         "especialidade": "Frontend & React",
-        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
+        "foto": "calu.jpg",
         "linkedin": "https://www.linkedin.com/in/caeu-nascimento-460866348",
         "github": "https://github.com/eucalunascimento"
       }
