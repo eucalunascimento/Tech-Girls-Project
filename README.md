@@ -4,11 +4,15 @@
 
 ![Tech Girls Banner](img-techgirls.jpg)
 
+🌐 **Deploy / Aplicação Online:** [Acesse o Tech Girls Hub aqui](https://seu-usuario.github.io/tech-girls-hub/)
+
 ---
 
 ## 📌 Sobre o Projeto
 
-O **Tech Girls Hub** funciona como a vitrine oficial da comunidade. Nosso objetivo é criar um espaço onde mulheres na tecnologia — desde estudantes buscando a primeira oportunidade até profissionais seniores — possam se conectar, compartilhar conhecimentos e expor seus projetos.
+O **Tech Girls Hub** funciona como a vitrine e hub oficial da comunidade. Nosso objetivo é criar um espaço onde mulheres na tecnologia — desde estudantes buscando a primeira oportunidade até profissionais seniores — possam se conectar, compartilhar conhecimentos e expor seus perfis e projetos práticos.
+
+A aplicação renderiza dinamicamente os cartões de perfil das alunas/integrantes a partir de uma base de dados centralizada em formato JSON, garantindo facilidade de manutenção e escalabilidade.
 
 Este projeto foi desenvolvido durante o **Tech Girls Challenge** (Equipe Noite, Fullstack Web), focando em boas práticas de desenvolvimento front-end, acessibilidade (WCAG) e responsividade do mobile ao desktop.
 
@@ -31,26 +35,25 @@ O projeto adota um sistema centralizado de **Design Tokens** via variáveis CSS 
 - **HTML5 Semântico**: Estruturação acessível com uso de tags como `<header>`, `<main>`, `<section>`, `<article>`, `<ul>` e `<footer>`.
 - **CSS3 Moderno**: 
   - **Design Tokens** (Variáveis CSS em `:root`).
-  - **Flexbox & CSS Grid**: Layout flexível e grade responsiva para cartões de projetos.
+  - **Flexbox & CSS Grid**: Layout flexível e grade responsiva para cartões de projetos e integrantes.
   - **Posicionamento Absoluto & Camadas (`z-index`)**: Banners com cabeçalho flutuante integrado.
 - **JavaScript ES6+**: 
-  - Leitura dinâmica do arquivo JSON (`perfis.json`) e renderização automática dos cartões de perfil no DOM.
+  - Leitura assíncrona/fetch do arquivo `perfis.json` e manipulação dinâmica do DOM para renderização dos cartões.
   - Formatação e tratamento automático de URLs externas e links de repositórios.
 - **Git & GitHub**: Versionamento de código estruturado com o padrão *Conventional Commits* e gerenciamento via Pull Requests.
 
 ---
 
-## 💻 Como Rodar o Projeto Localmente (HUB-008)
+## 💻 Como Executar o Projeto Localmente (HUB-008)
 
-Para executar este projeto em sua máquina local, siga os passos abaixo:
+Siga os passos abaixo para clonar e rodar o projeto na sua máquina:
 
 ### Pré-requisitos
-- Um navegador web moderno (Google Chrome, Firefox, Edge, Safari, etc.).
-- [Git](https://git-scm.com/) instalado em sua máquina.
-- (Opcional, mas recomendado) Extensão **Live Server** no VS Code ou um servidor local HTTP simples (devido ao uso de `fetch` para carregar o arquivo `perfis.json`).
+- Um navegador web moderno (Google Chrome, Firefox, Edge, etc.).
+- Extension **Live Server** no VS Code (recomendado para requisições do `fetch` em `perfis.json`) ou um servidor local simples.
 
 ### Passo a Passo
 
-1. **Clonar o Repositório**:
+1. **Clonar o repositório:**
    ```bash
    git clone [https://github.com/seu-usuario/tech-girls-hub.git](https://github.com/seu-usuario/tech-girls-hub.git)
