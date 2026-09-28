@@ -1,38 +1,39 @@
 /* ==========================================================================
-   DESIGN TOKENS (HUB-001)
+   DESIGN TOKENS & VARIÁVEIS CSS (HUB-001)
    ========================================================================== */
 :root {
-  /* Cores Principais da Marca */
-  --color-primary: #4B2189;         /* Roxo Profundo Tech Girls */
-  --color-secondary-yellow: #FFC02D;/* Amarelo da Logo Tech Girls (Texto do H3) */
-  --color-bg-site: #FFC02D;         /* Amarelo Suave para Fundo do Site */
-  --color-text-dark: #222222;       /* Texto Escuro */
-  --color-white: #ffffff;
-  
-  /* Tipografia */
-  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-size-base: 1rem;
-  --font-size-paragraph: 1.15rem;
-  --font-size-h3: 1.1rem;
-  --font-size-h2: 2.2rem;
-  --font-size-hero: 1.8rem;
+  /* Paleta de Cores Oficial */
+  --cor-primaria: #4B2189;             /* Roxo Profundo Tech Girls */
+  --cor-fundo: #F3EFF8;                /* Lilás Claro / Fundo do Site */
+  --cor-secundaria-amarelo: #FFC02D;   /* Amarelo Destaque da Logo */
+  --cor-texto-escuro: #222222;         /* Texto Principal */
+  --cor-branco: #ffffff;
+  --cor-cinza-suave: #e2d8ee;
 
-  /* Espaçamentos e Estrutura */
-  --container-max-width: 850px;
-  --spacing-xs: 8px;
-  --spacing-sm: 16px;
-  --spacing-md: 24px;
-  --spacing-lg: 40px;
-  --spacing-xl: 60px;
+  /* Tipografia */
+  --font-familia-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-tam-base: 1rem;
+  --font-tam-paragrafo: 1.15rem;
+  --font-tam-h3: 1.1rem;
+  --font-tam-h2: 2.2rem;
+  --font-tam-hero: 1.8rem;
+
+  /* Espaçamentos e Dimensões */
+  --largura-max-container: 850px;
+  --espaco-xs: 8px;
+  --espaco-sm: 16px;
+  --espaco-md: 24px;
+  --espaco-lg: 40px;
+  --espaco-xl: 60px;
   
-  /* Transições e Bordas */
-  --border-radius-card: 12px;
-  --border-radius-pill: 37px;
-  --transition-fast: 0.2s ease-in-out;
+  /* Arredondamento e Transições */
+  --raio-borda-card: 12px;
+  --raio-borda-pill: 37px;
+  --transicao-rapida: 0.2s ease-in-out;
 }
 
 /* ==========================================================================
-   RESETS E CONFIGURAÇÕES BASE
+   RESET E ESTILOS BASE
    ========================================================================== */
 * {
   margin: 0;
@@ -46,14 +47,24 @@ html, body {
 }
 
 body {
-  background-color: var(--color-bg-site); /* Novo background amarelo suave */
-  font-family: var(--font-family-base);
-  color: var(--color-text-dark);
+  background-color: var(--cor-fundo);
+  font-family: var(--font-familia-base);
+  color: var(--cor-texto-escuro);
   line-height: 1.6;
 }
 
 /* ==========================================================================
-   CABECALHO FLUTUANTE (TOP BAR)
+   ACESSIBILIDADE E FOCO VISÍVEL (WCAG)
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--cor-secundaria-amarelo) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--cor-primaria) !important;
+}
+
+/* ==========================================================================
+   CABEÇALHO E HERO
    ========================================================================== */
 .meu-cabecalho {
   position: absolute;
@@ -61,15 +72,15 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  background-color: var(--color-primary);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--border-radius-pill);
-  max-width: var(--container-max-width);
+  background-color: var(--cor-primaria);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  border-radius: var(--raio-borda-pill);
+  max-width: var(--largura-max-container);
   width: calc(100% - 32px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-sm);
+  gap: var(--espaco-sm);
 }
 
 .logo-cabecalho {
@@ -80,22 +91,19 @@ body {
 }
 
 .meu-cabecalho h1 {
-  color: var(--color-secondary-yellow);
+  color: var(--cor-fundo);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-/* ==========================================================================
-   HERO BANNERS
-   ========================================================================== */
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 520px;
+  height: 480px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--espaco-lg);
 }
 
 .community-hero {
@@ -107,16 +115,16 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  max-width: var(--container-max-width);
+  max-width: var(--largura-max-container);
   width: 100%;
   margin: 0 auto;
-  padding: var(--spacing-md);
+  padding: var(--espaco-md);
   z-index: 5;
 }
 
 .subtitulo-hero {
-  color: var(--color-secondary-yellow);
-  font-size: var(--font-size-hero);
+  color: var(--cor-fundo);
+  font-size: var(--font-tam-hero);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 800;
@@ -124,126 +132,113 @@ body {
 }
 
 /* ==========================================================================
-   ESTRUTURA PRINCIPAL & SEÇÕES (ALINHAMENTO À ESQUERDA)
+   ESTRUTURA PRINCIPAL
    ========================================================================== */
 .main-container {
-  max-width: var(--container-max-width);
+  max-width: var(--largura-max-container);
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--espaco-sm);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
-  text-align: left; /* Garante alinhamento dos textos no canto esquerdo */
+  gap: var(--espaco-xl);
+  text-align: left;
 }
 
 .titulo-destaque {
-  color: var(--color-primary);
-  font-size: var(--font-size-h2);
+  color: var(--cor-primaria);
+  font-size: var(--font-tam-h2);
   font-weight: 800;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--espaco-sm);
   line-height: 1.2;
-  text-align: left;
 }
 
 p {
   margin-bottom: 16px;
-  font-size: var(--font-size-paragraph);
-  text-align: left;
+  font-size: var(--font-tam-paragrafo);
 }
 
-/* --- DESTAQUE PARA OS TÍTULOS H3 (FRENTES DE ATUAÇÃO) --- */
 .frentes-atuacao {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: var(--spacing-md) 0;
+  gap: 16px;
+  margin: var(--espaco-md) 0;
+}
+
+.frentes-atuacao li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .frentes-atuacao h3 {
   display: inline-block;
-  background-color: var(--color-primary);        /* Fundo Roxo */
-  color: var(--color-secondary-yellow);           /* Texto Amarelo da Logo */
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria-amarelo);
   padding: 8px 16px;
   border-radius: 8px;
-  font-size: var(--font-size-h3);
+  font-size: var(--font-tam-h3);
   font-weight: 700;
-  width: fit-content;                            /* Envolve apenas o texto */
-  box-shadow: 0 2px 6px rgba(75, 33, 137, 0.2);
-  text-align: left;
+  margin-bottom: 6px;
 }
 
 .frentes-atuacao p {
-  margin-bottom: var(--spacing-sm);
-  padding-left: 4px;                             /* Pequeno recuo para leitura */
+  margin-bottom: 0;
+  padding-left: 4px;
 }
 
-/* ==========================================================================
-   DIVISORES E BOTÕES
-   ========================================================================== */
 .divisor-roxo {
   border: none;
   height: 3px;
-  background-color: var(--color-primary);
-  margin: var(--spacing-md) 0;
+  background-color: var(--cor-primaria);
+  margin: var(--espaco-md) 0;
   border-radius: 2px;
   width: 100%;
 }
 
-.secao-projetos {
-  width: 100%;
-}
-
-.instrucao-projetos {
-  margin-bottom: var(--spacing-sm);
-  font-size: 1rem;
-  color: #555;
-  text-align: left;
-}
-
+/* ==========================================================================
+   GRID DE BOTÕES E PROJETOS
+   ========================================================================== */
 .projetos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-sm);
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-sm);
 }
 
 .projeto-card-btn {
-  background-color: var(--color-white);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-card);
+  background-color: var(--cor-branco);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-borda-card);
   border: 2px solid transparent;
-  border-left: 5px solid var(--color-primary);
+  border-left: 5px solid var(--cor-primaria);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: left;
   cursor: pointer;
   width: 100%;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
   font-family: inherit;
 }
 
 .projeto-card-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(75, 33, 137, 0.15);
-  background-color: #ffffff;
 }
 
 .projeto-card-btn.ativo {
-  background-color: var(--color-primary);
-  color: var(--color-secondary-yellow);
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
 }
 
-.projeto-card-btn.ativo h3 {
-  color: var(--color-secondary-yellow);
-}
-
+.projeto-card-btn.ativo h3,
 .projeto-card-btn.ativo p {
-  color: #ffffff;
+  color: var(--cor-fundo);
 }
 
 .projeto-card-btn h3 {
-  color: var(--color-primary);
+  color: var(--cor-primaria);
   font-size: 1.25rem;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--espaco-xs);
 }
 
 .projeto-card-btn p {
@@ -253,7 +248,7 @@ p {
 }
 
 /* ==========================================================================
-   PAINEL DE INTEGRANTES
+   CARTÃO DE PERFIL RESILIENTE (HUB-003)
    ========================================================================== */
 .painel-integrantes.escondido {
   display: none;
@@ -262,7 +257,7 @@ p {
 .painel-integrantes {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--espaco-md);
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -271,11 +266,11 @@ p {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--spacing-sm);
+  gap: var(--espaco-sm);
 }
 
 .titulo-grupo-selecionado {
-  color: var(--color-primary);
+  color: var(--cor-primaria);
   font-size: 1.5rem;
 }
 
@@ -283,15 +278,14 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background-color: var(--color-primary);
-  color: var(--color-secondary-yellow);
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
-  cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transicao-rapida);
 }
 
 .btn-link-projeto:hover {
@@ -302,75 +296,89 @@ p {
 .integrantes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--spacing-sm);
+  gap: var(--espaco-sm);
 }
 
 .integrante-card {
-  background: var(--color-white);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-card);
+  background: var(--cor-branco);
+  padding: var(--espaco-md);
+  border-radius: var(--raio-borda-card);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  align-items: center;
+  text-align: center;
+  gap: var(--espaco-xs);
+}
+
+/* Avatar resiliente com suporte a falha de carregamento */
+.avatar-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--cor-cinza-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--cor-primaria);
+  margin-bottom: var(--espaco-xs);
+}
+
+.avatar-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .integrante-card h4 {
-  color: var(--color-primary);
+  color: var(--cor-primaria);
   font-size: 1.2rem;
 }
 
 .especialidade-tag {
   display: inline-block;
-  background-color: var(--color-bg-site);
-  color: var(--color-primary);
+  background-color: var(--cor-fundo);
+  color: var(--cor-primaria);
   font-weight: bold;
   font-size: 0.85rem;
-  padding: 4px 8px;
-  border-radius: 6px;
-  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 12px;
 }
 
 .links-integrante {
   display: flex;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-xs);
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-xs);
 }
 
 .link-perfil {
-  color: var(--color-primary);
+  color: var(--cor-primaria);
   font-weight: bold;
   text-decoration: none;
-  font-size: 0.9rem;
-  border: 1px solid var(--color-primary);
-  padding: 4px 10px;
+  font-size: 0.85rem;
+  border: 1px solid var(--cor-primaria);
+  padding: 4px 12px;
   border-radius: 16px;
-  cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--transicao-rapida);
 }
 
 .link-perfil:hover {
-  background-color: var(--color-primary);
-  color: var(--color-secondary-yellow);
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
 }
 
-/* ==========================================================================
-   RODAPÉ
-   ========================================================================== */
+/* RODAPÉ */
 .rodape-site {
   text-align: center;
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-xl);
-  background-color: var(--color-primary);
-  color: var(--color-secondary-yellow);
+  padding: var(--espaco-md);
+  margin-top: var(--espaco-xl);
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
   font-size: 0.9rem;
-  width: 100%;
 }
 
-/* Força a centralização explícita do paragrafo dentro do rodapé*/
-
 .rodape-site p {
-  text-align: center;
   margin-bottom: 0;
 }
 
@@ -381,12 +389,6 @@ p {
 
 @media (max-width: 768px) {
   .hero-banner {
-    height: 380px;
-  }
-  .titulo-destaque {
-    font-size: 1.8rem;
-  }
-  .subtitulo-hero {
-    font-size: 1.3rem;
+    height: 360px;
   }
 }
