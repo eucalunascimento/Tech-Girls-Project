@@ -1,0 +1,122 @@
+{
+  "dev-dados": {
+    "nomeGrupo": "Dev e Dados",
+    "linkProjeto": "https://github.com",
+    "integrantes": [
+      {
+        "nome": "Ana Silva",
+        "especialidade": "Frontend & React",
+        "foto": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Carla Lima",
+        "especialidade": "Data Analysis & Python",
+        "foto": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Beatriz Souza",
+        "especialidade": "Backend & SQL",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  "front-automacao": {
+    "nomeGrupo": "Front e Automação de Dados",
+    "linkProjeto": "https://github.com",
+    "integrantes": [
+      {
+        "nome": "Fernanda Costa",
+        "especialidade": "HTML/CSS & JavaScript",
+        "foto": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Juliana Mendes",
+        "especialidade": "Automation & Python",
+        "foto": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=150",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  "fullstack-starter": {
+    "nomeGrupo": "Fullstack Starter",
+    "linkProjeto": "https://github.com/eurenascimento/Tech-Girls-Project",
+    "integrantes": [
+      {
+        "nome": "Lane",
+        "especialidade": "Frontend & JS",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Vitoria",
+        "especialidade": "Fullstack (TS/Python)",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "CL",
+        "especialidade": "Frontend & React",
+        "foto": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
+        "linkedin": "https://www.linkedin.com/in/caeu-nascimento-460866348",
+        "github": "https://github.com/eucalunascimento"
+      }
+    ]
+  },
+  "gestao-qa": {
+    "nomeGrupo": "Gestão, QA e Governança",
+    "linkProjeto": "https://github.com",
+    "integrantes": [
+      {
+        "nome": "Mariana Rocha",
+        "especialidade": "QA & Testes Automatizados",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      },
+      {
+        "nome": "Patricia Alves",
+        "especialidade": "Scrum Master & Governança",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  "bi-grupo-a": {
+    "nomeGrupo": "Análise de Dados e BI (Grupo A)",
+    "linkProjeto": "https://github.com/Alinezc/Projeto_Analise_Dados_BI",
+    "integrantes": [
+      {
+        "nome": "Renata Oliveira",
+        "especialidade": "Power BI & Dashboards",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  },
+  "etl-grupo-b": {
+    "nomeGrupo": "Engenharia de Dados (Grupo B)",
+    "linkProjeto": "https://github.com/girls-dev-br/projeto-etl-crypto",
+    "integrantes": [
+      {
+        "nome": "Vanessa Santos",
+        "especialidade": "Data Pipelines & ETL",
+        "foto": "",
+        "linkedin": "https://linkedin.com",
+        "github": "https://github.com"
+      }
+    ]
+  }
+}
