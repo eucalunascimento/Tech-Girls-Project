@@ -8,7 +8,6 @@
   --cor-secundaria-amarelo: #FFC02D;   /* Amarelo Destaque da Logo */
   --cor-texto-escuro: #222222;         /* Texto Principal */
   --cor-branco: #ffffff;
-  --cor-cinza-suave: #e2d8ee;
 
   /* Tipografia */
   --font-familia-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -56,19 +55,18 @@ body {
 /* ==========================================================================
    ACESSIBILIDADE E FOCO VISÍVEL (WCAG)
    ========================================================================== */
-a:focus-visible,
-button:focus-visible {
+a:focus-visible {
   outline: 3px solid var(--cor-secundaria-amarelo) !important;
   outline-offset: 3px;
   box-shadow: 0 0 0 5px var(--cor-primaria) !important;
 }
 
 /* ==========================================================================
-   CABEÇALHO E HERO
+   CABEÇALHO E HERO BANNER
    ========================================================================== */
 .meu-cabecalho {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -84,22 +82,22 @@ button:focus-visible {
 }
 
 .logo-cabecalho {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   border-radius: 50%;
 }
 
 .meu-cabecalho h1 {
   color: var(--cor-fundo);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 600;
 }
 
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 480px;
+  height: 220px; /* Altura reduzida preenchendo toda a largura */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -107,7 +105,7 @@ button:focus-visible {
 }
 
 .community-hero {
-  background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.8)), url('img-techgirls.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('img-techgirls.jpg');
 }
 
 .overlay-hero {
@@ -118,7 +116,7 @@ button:focus-visible {
   max-width: var(--largura-max-container);
   width: 100%;
   margin: 0 auto;
-  padding: var(--espaco-md);
+  padding: var(--espaco-sm) var(--espaco-md);
   z-index: 5;
 }
 
@@ -197,7 +195,7 @@ p {
 }
 
 /* ==========================================================================
-   GRID DE BOTÕES E PROJETOS
+   GRID DE CARDS (LINKS DIRETOS PARA O GITHUB)
    ========================================================================== */
 .projetos-grid {
   display: grid;
@@ -207,6 +205,8 @@ p {
 }
 
 .projeto-card-btn {
+  display: block;
+  text-decoration: none;
   background-color: var(--cor-branco);
   padding: var(--espaco-md);
   border-radius: var(--raio-borda-card);
@@ -214,25 +214,13 @@ p {
   border-left: 5px solid var(--cor-primaria);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   text-align: left;
-  cursor: pointer;
-  width: 100%;
   transition: transform var(--transicao-rapida), box-shadow var(--transicao-rapida);
-  font-family: inherit;
 }
 
 .projeto-card-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(75, 33, 137, 0.15);
-}
-
-.projeto-card-btn.ativo {
-  background-color: var(--cor-primaria);
-  color: var(--cor-fundo);
-}
-
-.projeto-card-btn.ativo h3,
-.projeto-card-btn.ativo p {
-  color: var(--cor-fundo);
+  box-shadow: 0 8px 18px rgba(75, 33, 137, 0.18);
+  background-color: var(--cor-branco);
 }
 
 .projeto-card-btn h3 {
@@ -245,127 +233,6 @@ p {
   font-size: 0.95rem;
   margin-bottom: 0;
   color: #555;
-}
-
-/* ==========================================================================
-   CARTÃO DE PERFIL RESILIENTE (HUB-003)
-   ========================================================================== */
-.painel-integrantes.escondido {
-  display: none;
-}
-
-.painel-integrantes {
-  display: flex;
-  flex-direction: column;
-  gap: var(--espaco-md);
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.cabecalho-painel-grupo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--espaco-sm);
-}
-
-.titulo-grupo-selecionado {
-  color: var(--cor-primaria);
-  font-size: 1.5rem;
-}
-
-.btn-link-projeto {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-fundo);
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: all var(--transicao-rapida);
-}
-
-.btn-link-projeto:hover {
-  background-color: #381867;
-  transform: translateY(-2px);
-}
-
-.integrantes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--espaco-sm);
-}
-
-.integrante-card {
-  background: var(--cor-branco);
-  padding: var(--espaco-md);
-  border-radius: var(--raio-borda-card);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: var(--espaco-xs);
-}
-
-/* Avatar resiliente com suporte a falha de carregamento */
-.avatar-container {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: var(--cor-cinza-suave);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--cor-primaria);
-  margin-bottom: var(--espaco-xs);
-}
-
-.avatar-foto {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.integrante-card h4 {
-  color: var(--cor-primaria);
-  font-size: 1.2rem;
-}
-
-.especialidade-tag {
-  display: inline-block;
-  background-color: var(--cor-fundo);
-  color: var(--cor-primaria);
-  font-weight: bold;
-  font-size: 0.85rem;
-  padding: 4px 10px;
-  border-radius: 12px;
-}
-
-.links-integrante {
-  display: flex;
-  gap: var(--espaco-sm);
-  margin-top: var(--espaco-xs);
-}
-
-.link-perfil {
-  color: var(--cor-primaria);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.85rem;
-  border: 1px solid var(--cor-primaria);
-  padding: 4px 12px;
-  border-radius: 16px;
-  transition: all var(--transicao-rapida);
-}
-
-.link-perfil:hover {
-  background-color: var(--cor-primaria);
-  color: var(--cor-fundo);
 }
 
 /* RODAPÉ */
@@ -382,13 +249,8 @@ p {
   margin-bottom: 0;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 768px) {
   .hero-banner {
-    height: 360px;
+    height: 180px;
   }
 }
