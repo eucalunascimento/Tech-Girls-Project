@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- BANNER HERO PRINCIPAL -->
+  <!-- BANNER HERO PRINCIPAL REDUZIDO -->
   <div class="hero-banner community-hero">
     <header class="meu-cabecalho" role="banner">
       <img src="img-techgirls.jpg" alt="Logótipo oficial com a mascote da comunidade Tech Girls" class="logo-cabecalho">
@@ -68,49 +68,41 @@
     
     <hr class="divisor-roxo">
 
-    <!-- SEÇÃO: PROJETOS PRÁTICOS -->
+    <!-- SEÇÃO: PROJETOS PRÁTICOS COM LINKS DIRETOS -->
     <section class="secao-projetos" aria-labelledby="titulo-projetos">
       <h2 id="titulo-projetos" class="titulo-destaque">Projetos Práticos da Comunidade Tech Girls</h2>
-      <p class="instrucao-projetos">Clique em um grupo abaixo para visualizar as integrantes e seus perfis:</p>
+      <p class="instrucao-projetos">Clique em um projeto abaixo para acessar seu repositório oficial no GitHub:</p>
       
-      <!-- Grade de Botões dos Grupos -->
-      <div class="projetos-grid" role="region" aria-label="Lista de Grupos da Comunidade">
-        <button class="projeto-card-btn" data-grupo="dev-dados" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Dev e Dados</h3>
+      <div class="projetos-grid" role="region" aria-label="Lista de Projetos da Comunidade">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Dev e Dados ↗</h3>
           <p>Dashboard Web de Vendas e Atendimento</p>
-        </button>
+        </a>
 
-        <button class="projeto-card-btn" data-grupo="front-automacao" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Front e Automação de Dados</h3>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Front e Automação de Dados ↗</h3>
           <p>Portal de Automação de Relatórios e Tarefas</p>
-        </button>
+        </a>
 
-        <button class="projeto-card-btn" data-grupo="fullstack-starter" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Fullstack Starter</h3>
+        <a href="https://github.com/eucalunascimento/Tech-Girls-Project" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Fullstack Starter ↗</h3>
           <p>Sistema Web de Gestão de Tarefas (CRUD)</p>
-        </button>
+        </a>
 
-        <button class="projeto-card-btn" data-grupo="gestao-qa" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Gestão, QA e Governança</h3>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Gestão, QA e Governança ↗</h3>
           <p>Framework de Governança, Arquitetura e QA</p>
-        </button>
+        </a>
 
-        <button class="projeto-card-btn" data-grupo="bi-grupo-a" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Análise de Dados e BI (Grupo A)</h3>
+        <a href="https://github.com/Alinezc/Projeto_Analise_Dados_BI" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Análise de Dados e BI (Grupo A) ↗</h3>
           <p>Dashboard Executivo de Indicadores</p>
-        </button>
+        </a>
 
-        <button class="projeto-card-btn" data-grupo="etl-grupo-b" aria-expanded="false" aria-controls="painel-integrantes">
-          <h3>Engenharia de Dados (Grupo B)</h3>
+        <a href="https://github.com/girls-dev-br/projeto-etl-crypto" target="_blank" rel="noopener noreferrer" class="projeto-card-btn">
+          <h3>Engenharia de Dados (Grupo B) ↗</h3>
           <p>Pipeline de Dados (ETL) e Data Warehouse</p>
-        </button>
-      </div>
-
-      <hr class="divisor-roxo">
-
-      <!-- PAINEL DINÂMICO DOS INTEGRANTES -->
-      <div id="painel-integrantes" class="painel-integrantes escondido" aria-live="polite">
-        <!-- Injetado dinamicamente via JS a partir do perfis.json -->
+        </a>
       </div>
     </section>
 
